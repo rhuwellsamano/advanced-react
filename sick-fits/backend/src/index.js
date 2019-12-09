@@ -37,7 +37,7 @@ server.start(
   {
     cors: {
       credentials: true,
-      origin: *,
+      origin: "*",
     },
   },
   deets => {
