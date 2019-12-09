@@ -36,7 +36,6 @@ server.express.use(async (req, res, next) => {
 server.start(
   {
     cors: {
-      credentials: true,
       origin: "*",
     },
   },
