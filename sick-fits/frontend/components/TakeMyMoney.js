@@ -30,7 +30,7 @@ function totalItems(cart) {
 class TakeMyMoney extends React.Component {
   onToken = async (res, createOrder) => {
     NProgress.start();
-    // manually call the mutation once we have the stripe token
+    // manually call the mutation once we have the stripe token 
     const order = await createOrder({
       variables: {
         token: res.id,
@@ -59,7 +59,7 @@ class TakeMyMoney extends React.Component {
                   name="Sick Fits"
                   description={`Order of ${totalItems(me.cart)} items!`}
                   image={me.cart.length && me.cart[0].item && me.cart[0].item.image}
-                  stripeKey="pk_test_Vtknn6vSdcZWSG2JWvEiWSqC"
+                  stripeKey="pk_test_N7JeT91vlciSVaRIzRuG3EBL00M8WDumgS"
                   currency="USD"
                   email={me.email}
                   token={res => this.onToken(res, createOrder)}

@@ -45,8 +45,8 @@ class Items extends Component {
         >
           {({ data, error, loading }) => {
             if (loading) return <p>Loading...</p>;
-            // if (error) return <p>Error: {error.message}</p>;
-            if (error) return <p>Error: still wonky!</p>;
+            if (error) return <p>Error: {error.message}</p>;
+            // if (error) return <p>Error: still wonky!</p>;
 
             return (
               <ItemsList>{data.items.map(item => <Item item={item} key={item.id} />)}</ItemsList>
