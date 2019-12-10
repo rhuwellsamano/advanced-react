@@ -101,12 +101,12 @@ const Mutations = {
     if (!valid) {
       throw new Error('Invalid Password!');
     }
+    console.log("Context", ctx)
+    debugger
     // 3. generate the JWT Token
     const token = jwt.sign({ userId: user.id }, process.env.APP_SECRET);
     // 4. Set the cookie with the token
     console.log("Token", token)
-    console.log("Context", ctx)
-    debugger
     ctx.response.cookie('token', token, {
       httpOnly: true,
       maxAge: 1000 * 60 * 60 * 24 * 365,
