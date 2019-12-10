@@ -37,8 +37,8 @@ server.start(
   {
     cors: {
       credentials: true,
-      // origin: process.env.FRONTEND_URL,
-      "Access-Control-Allow-Origin": "*",
+      origin: process.env.FRONTEND_URL,
+      // "Access-Control-Allow-Origin": "*",
     },
   },
   deets => {
