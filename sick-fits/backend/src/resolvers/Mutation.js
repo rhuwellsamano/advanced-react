@@ -92,7 +92,7 @@ const Mutations = {
   },
   async signin(parent, { email, password }, ctx, info) {
     // 1. check if there is a user with that email
-    console.log("Context", ctx)
+    alert("Context", ctx)
     const user = await ctx.db.query.user({ where: { email } });
     if (!user) {
       throw new Error(`No such user founddd for email ${email}`);
@@ -105,7 +105,7 @@ const Mutations = {
     // 3. generate the JWT Token
     const token = jwt.sign({ userId: user.id }, process.env.APP_SECRET);
     // 4. Set the cookie with the token
-    console.log("Token", token)
+    alert("Token", token)
     ctx.response.cookie('token', token, {
       httpOnly: true,
       maxAge: 1000 * 60 * 60 * 24 * 365,
