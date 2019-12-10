@@ -33,7 +33,7 @@ class Signup extends Component {
       >
         {(signup, { error, loading }) => (
           <Form
-            method="post"
+            method="POST"
             onSubmit={async e => {
               e.preventDefault();
               await signup();

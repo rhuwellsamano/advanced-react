@@ -13,7 +13,9 @@ function createClient({ headers }) {
           // credentials: 'same-origin',
 
         },
-        headers,
+        headers: {
+          authorization: token ? `Bearer ${token}` : ""
+        },
       });
     },
     // local data
