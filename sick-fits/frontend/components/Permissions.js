@@ -55,6 +55,7 @@ const Permissions = props => (
             <tbody>{data.users.map(user => <UserPermissions user={user} key={user.id} />)}</tbody>
           </Table>
         </div>
+        {console.log(data)}
       </div>
     )}
   </Query>

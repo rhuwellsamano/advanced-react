@@ -7,7 +7,7 @@ function createClient({ headers }) {
   return new ApolloClient({
     uri: process.env.NODE_ENV === 'development' ? endpoint : prodEndpoint,
     request: operation => {
-      const token = localStorage.getItem('token');
+      const token = (localStorage ? localStorage.getItem('token') : "");
       operation.setContext({
         fetchOptions: {
           credentials: 'include',
